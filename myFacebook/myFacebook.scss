@@ -1,0 +1,203 @@
+$colors: lightblue, lightcoral, lightsteelblue, lightgreen, lightsalmon, lightslategrey, lightgray, lightpink, lightseagreen;
+body {
+  background-color: rgb(28, 30, 33);
+  font-family: "Segoe UI", 'Roboto', "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.header
+{
+  width: 1020px;
+  margin: auto;
+  display: flex;
+  .change-photo
+  {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    i
+    {
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+    }
+  }
+  .name
+  {
+    padding-left: 0.5em;
+    align-self: flex-end;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+
+  }
+  margin-bottom: 1em;
+}
+
+.nav
+{
+  width: 1020px;
+  margin: auto;
+  display: flex;
+  background-color: #242526;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  .box.menu 
+  {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .menu-list
+  {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    .menu-item
+    {
+      a
+      {
+        text-decoration: none;
+        color: grey;
+      }
+    }
+  }
+  .buttons
+  {
+    display: flex;
+    gap: 1em;
+    padding-right: 1em;
+    align-self: center;
+    button 
+    {
+      padding: 1em;
+      border-radius: 0.5em;
+      color: white;
+      background-color: #3a3b3c;
+      border: none;
+    }
+  }
+}
+
+.container
+{
+  width: 1020px;
+  margin: auto;
+  display: flex;
+  gap: 1em;
+  .left
+  {
+    .box
+    {
+      padding: 1em 2em 2em 2em;
+      border-radius: 1em;
+      width: fit-content;
+      background-color: #242526;
+      h2 
+      {
+        color: white;
+      }
+      .photos
+      {
+        $counter: 1;
+        @each $color in $colors
+        {
+          .photo:nth-of-type(#{$counter})
+          {
+            background-color: $color;
+          }
+          $counter: $counter + 1;
+        }
+        $counter: 1;
+        @each $color in $colors
+        {
+          .photo:hover:nth-of-type(#{$counter})
+          {
+            background-color: darken($color, 20);
+          }
+          $counter: $counter + 1;
+        }
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(3, 1fr);
+        .photo
+        {
+          height: 120px;
+          width: 100px;
+          border-radius: 1em;
+          .content
+          {
+            height: 100%;
+            visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: white;
+          }
+        }
+        .photo:hover
+        {
+          .content
+          {
+            visibility:visible;
+          }
+        }
+      }
+    }
+    .footer
+    {
+      ul
+      {
+        display: flex;
+        color: gray;
+        list-style: none;
+        font-size: small;
+        padding-left: 0em;
+        li:first-of-type
+        {
+          border-right: 2px solid grey;
+          padding-right: 1em;
+        }
+        li:last-of-type
+        {
+          padding-left: 1em;
+        }
+      }
+    }
+  }
+  .right
+  {
+    .box
+    {
+      background-color: #242526;
+      border-radius: 1em;
+      padding: 1em;
+      color: white;
+      margin-bottom: 2em;
+      .photos
+      {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+        .photo
+        {
+          height: 150px;
+          width: 150px;
+          flex-grow: 2;
+          background-color: gray;
+        }
+      }
+    }
+    a 
+    {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+
+}
+

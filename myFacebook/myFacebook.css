@@ -1,0 +1,196 @@
+body {
+  background-color: rgb(28, 30, 33);
+  font-family: "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.header {
+  width: 1020px;
+  margin: auto;
+  display: flex;
+  margin-bottom: 1em;
+}
+.header .change-photo {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+}
+.header .change-photo i {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+.header .name {
+  padding-left: 0.5em;
+  align-self: flex-end;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+}
+
+.nav {
+  width: 1020px;
+  margin: auto;
+  display: flex;
+  background-color: #242526;
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+.nav .box.menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.nav .menu-list {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+}
+.nav .menu-list .menu-item a {
+  text-decoration: none;
+  color: grey;
+}
+.nav .buttons {
+  display: flex;
+  gap: 1em;
+  padding-right: 1em;
+  align-self: center;
+}
+.nav .buttons button {
+  padding: 1em;
+  border-radius: 0.5em;
+  color: white;
+  background-color: #3a3b3c;
+  border: none;
+}
+
+.container {
+  width: 1020px;
+  margin: auto;
+  display: flex;
+  gap: 1em;
+}
+.container .left .box {
+  padding: 1em 2em 2em 2em;
+  border-radius: 1em;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #242526;
+}
+.container .left .box h2 {
+  color: white;
+}
+.container .left .box .photos {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+}
+.container .left .box .photos .photo:nth-of-type(1) {
+  background-color: lightblue;
+}
+.container .left .box .photos .photo:nth-of-type(2) {
+  background-color: lightcoral;
+}
+.container .left .box .photos .photo:nth-of-type(3) {
+  background-color: lightsteelblue;
+}
+.container .left .box .photos .photo:nth-of-type(4) {
+  background-color: lightgreen;
+}
+.container .left .box .photos .photo:nth-of-type(5) {
+  background-color: lightsalmon;
+}
+.container .left .box .photos .photo:nth-of-type(6) {
+  background-color: lightslategrey;
+}
+.container .left .box .photos .photo:nth-of-type(7) {
+  background-color: lightgray;
+}
+.container .left .box .photos .photo:nth-of-type(8) {
+  background-color: lightpink;
+}
+.container .left .box .photos .photo:nth-of-type(9) {
+  background-color: lightseagreen;
+}
+.container .left .box .photos .photo:hover:nth-of-type(1) {
+  background-color: #5fb3ce;
+}
+.container .left .box .photos .photo:hover:nth-of-type(2) {
+  background-color: #e52525;
+}
+.container .left .box .photos .photo:hover:nth-of-type(3) {
+  background-color: #688ec0;
+}
+.container .left .box .photos .photo:hover:nth-of-type(4) {
+  background-color: #38e038;
+}
+.container .left .box .photos .photo:hover:nth-of-type(5) {
+  background-color: #ff5714;
+}
+.container .left .box .photos .photo:hover:nth-of-type(6) {
+  background-color: #495561;
+}
+.container .left .box .photos .photo:hover:nth-of-type(7) {
+  background-color: #a0a0a0;
+}
+.container .left .box .photos .photo:hover:nth-of-type(8) {
+  background-color: #ff506a;
+}
+.container .left .box .photos .photo:hover:nth-of-type(9) {
+  background-color: #105c57;
+}
+.container .left .box .photos .photo {
+  height: 120px;
+  width: 100px;
+  border-radius: 1em;
+}
+.container .left .box .photos .photo .content {
+  height: 100%;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: white;
+}
+.container .left .box .photos .photo:hover .content {
+  visibility: visible;
+}
+.container .left .footer ul {
+  display: flex;
+  color: gray;
+  list-style: none;
+  font-size: small;
+  padding-left: 0em;
+}
+.container .left .footer ul li:first-of-type {
+  border-right: 2px solid grey;
+  padding-right: 1em;
+}
+.container .left .footer ul li:last-of-type {
+  padding-left: 1em;
+}
+.container .right .box {
+  background-color: #242526;
+  border-radius: 1em;
+  padding: 1em;
+  color: white;
+  margin-bottom: 2em;
+}
+.container .right .box .photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+.container .right .box .photos .photo {
+  height: 150px;
+  width: 150px;
+  flex-grow: 2;
+  background-color: gray;
+}
+.container .right a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}/*# sourceMappingURL=myFacebook.css.map */
