@@ -1,0 +1,201 @@
+@import '_variables';
+
+body { font-family: BlinkMacSystemFont, Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif; }
+
+*
+{
+    margin: 0;
+}
+
+header
+{
+    box-sizing: border-box;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary_color;
+    padding: 1em;
+    z-index: 1;
+    top: 0;
+    color: white;
+    .logo
+    {
+        font-size: 1.5em;
+        span:first-of-type
+        {
+            font-weight: bold;
+        }
+    }
+
+    .address
+    {
+        letter-spacing: 2px;
+        border-bottom: 2px solid white;
+    }
+
+    button
+    {
+        background-color: $primary_color;
+        border: none;
+        font-size: 1.5em;
+        color: white;
+    }
+}
+
+.type-section
+{
+    width: 100%;
+    text-align: center;  
+    margin-top: 4em;
+    background-color: $type-section-background;
+
+    .buttons
+    {
+        button
+        {
+            padding: 1em;
+            font-size: 1em;
+            border: none;
+            background-color: $type-section-background;
+        }
+        button:hover
+        {
+            color: $primary_color;
+            border-bottom: 2px solid $primary-color;
+        }
+    }
+}
+
+.category-section
+{
+    width: 1020px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 1em;
+    button
+    {
+        border: none;
+        padding: 0.5em;
+        background-color: white;
+        font-size: 0.9em;
+    }
+    button:last-of-type
+    {
+        color: $primary_color;
+        font-weight: bold;
+    }
+    button:hover
+    {
+        background-color: $primary_color;
+        color: white;
+        border-radius: 1em;
+    }
+}
+
+.main-section
+{
+    width: 1020px;
+    margin: auto;
+    display: flex;
+    gap: 1em;
+    .left-main-section
+    {   
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        .header
+        {
+            font-weight: bold;
+            font-size: larger;
+        }
+    }
+    .right-main-section
+    {
+        width: 100%;
+        .search
+        {
+            input
+            {
+                width: 80%;
+                font-size: 1em;
+                height: 2em;
+            }
+            button
+            {
+                font-size: 1.5em;
+                border: none;
+                background-color: white ;
+            }
+        }
+        div 
+        {
+            .header
+            {
+                font-weight: bold;
+                font-size: large;
+                padding: 1em 1em 1em 0;
+            }
+
+            .item
+            {
+                box-sizing: border-box;
+                border: 2px lightgrey solid;
+                display: flex;
+                margin-bottom: 1em;
+                position: relative;
+                height: 13em;
+                .pic
+                {
+                    width: 300px;
+                }
+                .logo
+                {
+                    background-color: white;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    left: 15em;
+                    bottom: 40px;
+                    .name
+                    {
+                        color: $primary_color;
+                        font-size: 1.5em;
+                        transform: rotate(-20deg);
+                        font-weight: bold;
+                    }
+                }
+                .info
+                {  
+                    margin-left: 4.5em;
+                    color: grey;
+                    width: 50%;
+                    .content
+                    {
+                        display: flex;
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+$item-colors: #e1bbbb, #e1c6bb, #eeeccc, #d7e1bb, #bbe1ca, #bbdce1, #bcbbe1, #d9bbe1;
+
+@for $i from 1 through 12 {
+  .item:nth-child(#{$i}) 
+  {
+    .pic
+    {
+        background-color: nth($item-colors, $i % length($item-colors) + 1);
+    }
+  }
+}

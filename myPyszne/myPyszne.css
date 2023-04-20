@@ -1,0 +1,197 @@
+body {
+  font-family: BlinkMacSystemFont, Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+header {
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fb6100;
+  padding: 1em;
+  z-index: 1;
+  top: 0;
+  color: white;
+}
+header .logo {
+  font-size: 1.5em;
+}
+header .logo span:first-of-type {
+  font-weight: bold;
+}
+header .address {
+  letter-spacing: 2px;
+  border-bottom: 2px solid white;
+}
+header button {
+  background-color: #fb6100;
+  border: none;
+  font-size: 1.5em;
+  color: white;
+}
+
+.type-section {
+  width: 100%;
+  text-align: center;
+  margin-top: 4em;
+  background-color: #f8f5f2;
+}
+.type-section .buttons button {
+  padding: 1em;
+  font-size: 1em;
+  border: none;
+  background-color: #f8f5f2;
+}
+.type-section .buttons button:hover {
+  color: #fb6100;
+  border-bottom: 2px solid #fb6100;
+}
+
+.category-section {
+  width: 1020px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.category-section button {
+  border: none;
+  padding: 0.5em;
+  background-color: white;
+  font-size: 0.9em;
+}
+.category-section button:last-of-type {
+  color: #fb6100;
+  font-weight: bold;
+}
+.category-section button:hover {
+  background-color: #fb6100;
+  color: white;
+  border-radius: 1em;
+}
+
+.main-section {
+  width: 1020px;
+  margin: auto;
+  display: flex;
+  gap: 1em;
+}
+.main-section .left-main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.main-section .left-main-section .header {
+  font-weight: bold;
+  font-size: larger;
+}
+.main-section .right-main-section {
+  width: 100%;
+}
+.main-section .right-main-section .search input {
+  width: 80%;
+  font-size: 1em;
+  height: 2em;
+}
+.main-section .right-main-section .search button {
+  font-size: 1.5em;
+  border: none;
+  background-color: white;
+}
+.main-section .right-main-section div .header {
+  font-weight: bold;
+  font-size: large;
+  padding: 1em 1em 1em 0;
+}
+.main-section .right-main-section div .item {
+  box-sizing: border-box;
+  border: 2px lightgrey solid;
+  display: flex;
+  margin-bottom: 1em;
+  position: relative;
+  height: 13em;
+}
+.main-section .right-main-section div .item .pic {
+  width: 300px;
+}
+.main-section .right-main-section div .item .logo {
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 15em;
+  bottom: 40px;
+}
+.main-section .right-main-section div .item .logo .name {
+  color: #fb6100;
+  font-size: 1.5em;
+  transform: rotate(-20deg);
+  font-weight: bold;
+}
+.main-section .right-main-section div .item .info {
+  margin-left: 4.5em;
+  color: grey;
+  width: 50%;
+}
+.main-section .right-main-section div .item .info .content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.item:nth-child(1) .pic {
+  background-color: #e1c6bb;
+}
+
+.item:nth-child(2) .pic {
+  background-color: #eeeccc;
+}
+
+.item:nth-child(3) .pic {
+  background-color: #d7e1bb;
+}
+
+.item:nth-child(4) .pic {
+  background-color: #bbe1ca;
+}
+
+.item:nth-child(5) .pic {
+  background-color: #bbdce1;
+}
+
+.item:nth-child(6) .pic {
+  background-color: #bcbbe1;
+}
+
+.item:nth-child(7) .pic {
+  background-color: #d9bbe1;
+}
+
+.item:nth-child(8) .pic {
+  background-color: #e1bbbb;
+}
+
+.item:nth-child(9) .pic {
+  background-color: #e1c6bb;
+}
+
+.item:nth-child(10) .pic {
+  background-color: #eeeccc;
+}
+
+.item:nth-child(11) .pic {
+  background-color: #d7e1bb;
+}
+
+.item:nth-child(12) .pic {
+  background-color: #bbe1ca;
+}/*# sourceMappingURL=zad_03.css.map */
