@@ -1,0 +1,270 @@
+@import '_variables2';
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body 
+{ 
+    font-family: Roboto, Arial, sans-serif; 
+}
+
+header
+{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px lightgrey solid;
+    background-color: white;
+    .start
+    {
+        display: flex;
+        button
+        {
+            border: none;
+            padding: 1em;
+            font-size: 1em;  
+            background-color: white;
+        }
+        .logo
+        {
+            display: flex;
+            align-items: center;
+            i
+            {
+                color: red;
+            }
+            .name
+            {
+                font-size: 1.5em;
+                font-weight: bold;
+                position: relative;
+            }   
+            .pl
+            {
+                position: relative;
+                font-size: smaller;
+                bottom: 5px;
+                left: 5px;
+            }
+        }
+    }
+    .center
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input
+        {
+            width: 60%;
+            height: 2.5em;
+        }
+        button
+        {
+            padding: 0.7em;
+        }
+
+    }
+    .end
+    {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        button
+        {
+            font-size: 1em;
+            border: none;
+            background-color: white;
+        }
+        .login
+        {
+            height: 1em;
+            font-size: medium;
+            display: flex;
+            color: $login-color;
+            text-transform: uppercase;
+            font-weight: bold;
+            justify-content: center;
+            align-items: center;
+            padding: 1em;
+            gap: 1em;   
+            border: 2px solid $login_color;
+            margin-right: 1em;
+        }
+    }
+
+}
+
+#body
+{
+    display: flex;
+    padding-top: 3em;
+    #left-section
+    {
+        width: 20em;
+        .link-group
+        {
+            ul
+            {
+
+                li
+                {
+                    list-style-type: none;
+                    padding-top: 1em;
+                    padding-left: 1em;
+                    padding-bottom: 1em;
+                    i 
+                    {
+                        padding-right: 1em;
+                    }
+                }
+            }
+            border-bottom: 2px lightgrey solid;
+            .header
+            {
+                color: grey;
+                padding: 0.5em;
+                padding-top: 1em;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+        .login-info
+        {
+            padding: 1em;
+            border-bottom: 2px lightgrey solid;
+            p
+            {
+                padding-bottom: 1em;
+            }
+            .login
+            {
+                background-color: white;
+                height: 2em;
+                font-size: medium;
+                display: flex;
+                color: $login-color;
+                text-transform: uppercase;
+                font-weight: bold;
+                justify-content: center;
+                align-items: center;
+                padding: 1em;
+                gap: 1em;   
+                border: 2px solid $login_color;
+                margin-right: 1em;
+            }
+
+        }
+    }
+    #main-section
+    {
+        width: 100%;
+        .buttons
+        {
+            padding: 1em;
+            border-bottom: 2px lightgray solid;
+            button
+            {
+                background-color: $category-hover;
+                margin-right: 1em;
+                padding: 0.5em 1em 0.5em 1em;
+                border-radius: 1em;
+                border: 1px grey solid;
+            }
+            button:hover
+            {
+                background-color: black;
+                color: whitesmoke;
+            }
+        }
+        .main-movie-section
+        {
+            background-color: $background-color;
+            padding-top: 2em;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1em;
+            border-bottom: 3px lightgray solid;
+            padding-bottom: 2em;
+            .header
+            {
+                width: 100%;
+                font-size: 1.5em;
+                padding-left: 2em;
+            }
+            .movie 
+            {
+
+                width: 280px;
+                .movie-frame
+                {
+                    height: 150px;
+                    background-color: lightgray;
+                    margin-bottom: 1em;
+                }
+                .avatar
+                {
+                    position: absolute;
+                    background-color: lightgray;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                }
+
+                .movie-info
+                {
+                    margin-left: 4em;
+                    .title
+                    {
+                        font-weight: bold;
+                        padding-bottom: 0.5em;
+                    }
+                    .info
+                    {
+                        color: gray;
+                        .channel-name
+                        {
+                            font-size: 0.9em;
+                            padding-bottom: 0.5em;
+                        }
+                        span 
+                        {
+                            font-size: small;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        $counter: 1;
+        @each $color in $movie-colors
+        {
+            .movie:nth-child(#{$counter})
+                {
+                    .movie-frame
+                    {
+                        background-color: $color;
+                    }
+                }
+                $counter: $counter + 1;
+        }
+        .main-movie-section:nth-child(3)
+        {
+            .movie
+            {
+                .movie-frame
+                {
+                    background-color: lightgray;
+                }
+            }
+        }
+    }
+
+}
+
+
+
